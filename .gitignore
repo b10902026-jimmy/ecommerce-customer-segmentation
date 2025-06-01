@@ -193,14 +193,6 @@ temp/
 tmp/
 *.tmp
 
-# 圖表輸出 Plot outputs
-plots/
-figures/
-*.png
-*.jpg
-*.jpeg
-*.pdf
-*.svg
 
 # 模型檔案 Model files
 models/
