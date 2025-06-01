@@ -1,0 +1,37 @@
+name: customer-segmentation
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Python 版本
+  - python=3.9
+  
+  # 科學計算核心套件 (通過 Conda 安裝以確保最佳性能)
+  - numpy>=1.21.0
+  - pandas>=1.3.0
+  - scipy>=1.7.0
+  - scikit-learn>=1.0.0
+  
+  # 視覺化套件 (Conda 版本通常更穩定)
+  - matplotlib>=3.4.0
+  - seaborn>=0.11.0
+  
+  # 系統工具
+  - pip
+  
+  # 開發工具
+  - poetry>=1.2.0
+  
+  # Jupyter (團隊協作常用)
+  - jupyter
+  - jupyterlab
+  - ipywidgets
+  
+  # 可選：如果需要處理大型資料集
+  - dask
+  - numba
+  
+  # pip 安裝的套件 (Poetry 會管理這些)
+  - pip:
+    - plotly>=5.0.0
+    - python-dateutil>=2.8.0

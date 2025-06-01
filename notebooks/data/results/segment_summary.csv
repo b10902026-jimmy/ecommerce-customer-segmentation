@@ -1,0 +1,10 @@
+Customer_Segment,Customer_Count,Avg_Recency,Avg_Frequency,Avg_Monetary,Total_Monetary,Percentage
+Champions,957,12.82,11.12,6051.87,5791640.74,22.06
+Potential Loyalists,727,31.92,2.15,1033.33,751234.35,16.76
+Hibernating,670,229.81,1.01,202.01,135349.83,15.44
+Need Attention,547,113.35,3.12,1189.23,650507.53,12.61
+Loyal Customers,453,39.22,5.25,1938.03,877928.65,10.44
+About to Sleep,324,256.93,2.27,1028.13,333115.56,7.47
+Lost,291,121.82,1.56,921.5,268156.13,6.71
+Promising,193,53.14,1.03,224.3,43290.22,4.45
+New Customers,176,18.48,1.01,204.47,35985.88,4.06

@@ -1,0 +1,101 @@
+[tool.poetry]
+name = "customer-segmentation"
+version = "1.0.0"
+description = "客戶分群分析系統 - Customer Segmentation Analysis System using RFM Model"
+authors = ["Your Team <team@example.com>"]
+readme = "README.md"
+packages = [{include = "customer_segmentation", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+# 核心依賴通過 Conda 管理，這裡只列出 Poetry 特有的套件
+plotly = "^5.0.0"
+python-dateutil = "^2.8.0"
+pydantic = "^1.10.0"  # 資料驗證
+click = "^8.0.0"      # CLI 介面
+rich = "^13.0.0"      # 美化終端輸出
+loguru = "^0.6.0"     # 現代化日誌系統
+
+[tool.poetry.group.dev.dependencies]
+# 開發工具
+black = "^23.0.0"           # 代碼格式化
+isort = "^5.12.0"           # import 排序
+flake8 = "^6.0.0"           # 代碼檢查
+mypy = "^1.0.0"             # 類型檢查
+pre-commit = "^3.0.0"       # Git hooks
+jupyter = "^1.0.0"          # Jupyter notebook
+
+[tool.poetry.group.docs.dependencies]
+# 文件生成
+mkdocs = "^1.4.0"
+mkdocs-material = "^9.0.0"
+mkdocstrings = "^0.20.0"
+
+[tool.poetry.scripts]
+# CLI 命令
+customer-seg = "customer_segmentation.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# 工具配置
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+known_first_party = ["customer_segmentation"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = [
+    "matplotlib.*",
+    "seaborn.*",
+    "plotly.*",
+    "sklearn.*",
+]
+ignore_missing_imports = true
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+    ".venv",
+    ".mypy_cache",
+]

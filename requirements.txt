@@ -1,0 +1,21 @@
+# 客戶分群分析系統依賴套件 Customer Segmentation Analysis System Dependencies
+
+# 核心資料處理 Core Data Processing
+pandas>=1.3.0
+numpy>=1.21.0
+
+# 視覺化套件 Visualization Libraries
+matplotlib>=3.4.0
+seaborn>=0.11.0
+plotly>=5.0.0
+
+# 機器學習套件 Machine Learning Libraries
+scikit-learn>=1.0.0
+
+# 日期時間處理 Date/Time Processing
+python-dateutil>=2.8.0
+
+# 可選套件 Optional Packages (for enhanced functionality)
+# jupyter>=1.0.0          # 如果要在 Jupyter Notebook 中使用
+# ipywidgets>=7.6.0        # 互動式小工具
+# kaleido>=0.2.1           # Plotly 靜態圖片匯出
